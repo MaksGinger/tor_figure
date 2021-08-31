@@ -23,7 +23,7 @@ namespace Lab5
         private double dy;
         private double k;
 
-        private double kScaling = 0;
+        private double kScaling = 0; //coefficient of scaling
         public double KScaling { 
             get 
             {
@@ -114,8 +114,8 @@ namespace Lab5
             Point[] points2D = new Point[4];
             for(int i = 0; i < coordinatesOfPolygon.Count(); i++)
             {
-                if (!IsScaling)
-                {
+                if (!IsScaling)    
+                {                    
                     points2D[0].X = (int)(k * coordinatesOfPolygon[i].Point1.X + dx);
                     points2D[0].Y = (int)(k * coordinatesOfPolygon[i].Point1.Y + dy);
                     points2D[1].X = (int)(k * coordinatesOfPolygon[i].Point2.X + dx);
